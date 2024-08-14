@@ -11,10 +11,10 @@
                 'controller' => 'IndexController',
                 'action' => 'index'
             );
-            $routes['login'] = array(
-                'route' => '/login',
+            $routes['apps'] = array(
+                'route' => '/apps',
                 'controller' => 'IndexController',
-                'action' => 'login' 
+                'action' => 'apps' 
             );
 
             $this->setRoutes($routes);
