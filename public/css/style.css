@@ -1,14 +1,22 @@
 /************************************************
 
-INDEX:
+LOGIN:
 - FORM
+
+HOME:
+- LOGO PORTAIS
 
 *************************************************/
 
 @charset "UTF-8";
 
+:root {
+    --colorBlue: #293165;
+    --colorRed: #c41d21;
+}
+
 /****************************
-********* INDEX *************
+********* LOGIN *************
 ****************************/
 
 /***********
@@ -31,4 +39,34 @@ INDEX:
 .borda-form {
     border: 1px solid lightgray;
     border-radius: 10px;
+}
+
+
+/****************************
+********* HOME *************
+****************************/
+
+/***********
+    PORTAIS 
+***********/
+
+.align-center {
+    text-align: center;
+}
+
+.container-logo {
+    margin-bottom: 100px;
+    margin-right: 100px;
+}
+
+.link-portais {
+    text-decoration: none;
+    color: var(--colorBlue);
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.link-portais:hover {
+    color: var(--colorRed);
+    transition: .75s;
 }

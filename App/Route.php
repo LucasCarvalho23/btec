@@ -9,12 +9,12 @@
             $routes['home'] = array(
                 'route' => '/',
                 'controller' => 'IndexController',
-                'action' => 'index'
+                'action' => 'home'
             );
-            $routes['apps'] = array(
-                'route' => '/apps',
+            $routes['login'] = array(
+                'route' => '/login',
                 'controller' => 'IndexController',
-                'action' => 'apps' 
+                'action' => 'login' 
             );
 
             $this->setRoutes($routes);
