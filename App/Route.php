@@ -16,6 +16,11 @@
                 'controller' => 'IndexController',
                 'action' => 'login' 
             );
+            $routes['validarLogin'] = array(
+                'route' => '/validarLogin',
+                'controller' => 'IndexController',
+                'action' => 'validarLogin' 
+            );
 
             $this->setRoutes($routes);
             
