@@ -23,9 +23,13 @@
             echo "<pre>";
             print_r($_POST);
             echo "</pre>";
-            //$login = Container::getModel('login');
-            //$login->__set('login', $_POST['login']);
-            //$login->__set('senha', $_POST['senha']);
+            echo ("<hr>");
+            $login = Container::getModel('login');
+            $login->__set('login', $_POST['login']);
+            $login->__set('senha', $_POST['senha']);
+            echo "<pre>";
+            print_r($login);
+            echo "</pre>";
             //$login->validarLogin();
             //$this->render('login');
         }
