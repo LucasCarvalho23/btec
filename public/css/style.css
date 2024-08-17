@@ -53,29 +53,33 @@ HOME:
 .align-center {
     text-align: center;
 }
-
 .container-logo {
     margin-bottom: 100px;
 }
-
+.container-logout {
+    text-align: right;
+    margin-top: 15px;;
+    cursor: pointer;
+}
+.container-logout a {
+    text-decoration: none;
+    color: #dc3545;
+}
 @media (max-width: 767px) {
     .container-logo {
         margin-right: 100px;
     }
 }
-
 .link-portais {
     text-decoration: none;
     color: var(--colorBlue);
     font-size: .8em;
     font-weight: bold;
 }
-
 .link-portais:hover {
     color: var(--colorRed);
     transition: .75s;
 }
-
 .container-img-logo img {
     cursor: pointer;
 }

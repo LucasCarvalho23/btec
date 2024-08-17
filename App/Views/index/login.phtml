@@ -7,6 +7,9 @@
             <form action="/validarLogin" method="post" class="p-5">
                 <input type="text" placeholder="Digite seu login" class="form-control borda-form" name="login" required>
                 <input type="password" placeholder="Digite sua senha" class="form-control mt-3 borda-form" name="senha" required>
+                <?php if(isset($_GET['error']) && $_GET['error'] == 'error') { ?>
+                <small class="text-danger">Login e/ou senha inválidas</small>
+                <?php  } ?>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary mt-3">LOGIN</button>
                 </div>

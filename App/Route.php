@@ -21,6 +21,11 @@
                 'controller' => 'IndexController',
                 'action' => 'validarLogin' 
             );
+            $routes['logout'] = array(
+                'route' => '/logout',
+                'controller' => 'IndexController',
+                'action' => 'logout' 
+            );
 
             $this->setRoutes($routes);
             
