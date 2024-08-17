@@ -20,18 +20,15 @@
         }
 
         public function validarLogin() {
-            echo "<pre>";
-            print_r($_POST);
-            echo "</pre>";
-            echo ("<hr>");
             $login = Container::getModel('login');
             $login->__set('login', $_POST['login']);
-            $login->__set('senha', $_POST['senha']);
-            echo "<pre>";
-            print_r($login);
-            echo "</pre>";
-            //$login->validarLogin();
-            //$this->render('login');
+            $login->__set('senha', md5($_POST['senha']));
+            $return = $login->validarLogin();
+            if ($return == true) {
+                $this->render('home');
+            } else if ($return == false) {
+                header('Location: /login?error=error');
+            }
         }
 
     }
