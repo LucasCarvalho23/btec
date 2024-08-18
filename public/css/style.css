@@ -27,7 +27,8 @@ HOME:
     color: black;
 }
 .a-login:hover {
-    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--colorRed);
 }
 .img-btec {
     text-align: center;

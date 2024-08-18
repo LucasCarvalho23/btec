@@ -7,8 +7,10 @@
     class IndexController extends Action {
 
         public function home() {
-            //Lógica de autenticação
-            if (1 != 1) {
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
                 $this->render('home');
             } else {
                 $this->login();
@@ -16,7 +18,14 @@
         }
 
         public function login() {
-            $this->render('login');
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                header('Location: /');
+            } else {
+                $this->render('login');
+            }
         }
 
         public function logout() {
@@ -33,9 +42,9 @@
             if ($return == true) {
                 session_start();
                 $_SESSION['login'] = true;
-                $this->render('home');
+                header('Location: /');
             } else if ($return == false) {
-                $_SESSION['login'] = true;
+                $_SESSION['login'] = false;
                 header('Location: /login?error=error');
             }
         }
