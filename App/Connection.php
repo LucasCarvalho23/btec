@@ -11,7 +11,7 @@ use PDOException;
                 $host = 'localhost';
                 $dbname = 'btec';
                 $user = "root";
-                $password = "";
+                $password = "Skrillex@23";
                 $connect = new \PDO(
                     "mysql:host=$host;dbname=$dbname;charset=utf8",
                     "$user",
