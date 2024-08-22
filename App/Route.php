@@ -21,6 +21,11 @@
                 'controller' => 'IndexController',
                 'action' => 'validarLogin' 
             );
+            $routes['oficina'] = array(
+                'route' => '/oficina',
+                'controller' => 'AppController',
+                'action' => 'oficina' 
+            );
             $routes['logout'] = array(
                 'route' => '/logout',
                 'controller' => 'IndexController',
