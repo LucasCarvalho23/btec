@@ -23,7 +23,7 @@
             );
             $routes['oficina'] = array(
                 'route' => '/oficina',
-                'controller' => 'AppController',
+                'controller' => 'IndexController',
                 'action' => 'oficina' 
             );
             $routes['logout'] = array(

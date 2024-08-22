@@ -49,6 +49,17 @@
             }
         }
 
+        public function oficina() {
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                $this->render('oficina');
+            } else {
+                $this->render('login');
+            }
+        }
+
     }
 
 ?>
