@@ -8,6 +8,8 @@
         
         public function oficina() {
             echo "Chegamos até aqui";
+            $this->render('oficina');
+            //header('Location: /oficina');
         }
 
     }
